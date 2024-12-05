@@ -1,8 +1,7 @@
 package com.market.app.persistence.entity;
 
+import com.market.app.domain.Category;
 import jakarta.persistence.*;
-
-import javax.annotation.processing.Generated;
 
 @Entity
 @Table(name = "productos")
@@ -87,5 +86,13 @@ public class ProductoEntity {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public CategoriasEntity getCategorias() {
+        return categorias;
+    }
+
+    public void setCategorias(CategoriasEntity categorias) {
+        this.categorias = categorias;
     }
 }

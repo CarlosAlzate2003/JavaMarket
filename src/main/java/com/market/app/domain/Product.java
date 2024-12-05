@@ -15,7 +15,7 @@ public class Product {
 
     private boolean active;
 
-    private CategoriasEntity category;
+    private Category category;
 
     public int getProductoId() {
         return productoId;
@@ -65,11 +65,11 @@ public class Product {
         this.active = active;
     }
 
-    public CategoriasEntity getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(CategoriasEntity category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }

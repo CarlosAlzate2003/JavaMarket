@@ -30,7 +30,7 @@ public class CompraEntity {
     @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private ClienteEntity cliente;
 
-    @OneToMany(mappedBy = "producto")
+    @OneToMany(mappedBy = "compra")
     private List<ComprasProductoEntity> productos;
 
     public Integer getIdCompra() {

@@ -12,7 +12,7 @@ public class CategoriasEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
-    private String idCategoria;
+    private Integer idCategoria;
 
     @Column(name = "descripcion")
     private String descripcion;
@@ -23,11 +23,19 @@ public class CategoriasEntity {
     @OneToMany(mappedBy = "categorias")
     private List<ProductoEntity> productos;
 
-    public String getIdCategoria() {
+    public List<ProductoEntity> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<ProductoEntity> productos) {
+        this.productos = productos;
+    }
+
+    public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(String idCategoria) {
+    public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
